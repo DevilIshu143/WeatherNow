@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherNow - Detailed Weather Forecasts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">WeatherNow</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="forecast.html">Forecast</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="search-section">
+            <div class="search-bar">
+                <input type="text" id="locationInput" placeholder="Enter a city">
+                <button id="searchButton">Search</button>
+                <button id="getCurrentLocation">
+                    <span class="location-icon">📍</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="weather-dashboard">
+            <div class="current-weather glass-panel">
+                <h2 id="location"></h2>
+                <div class="weather-main">
+                    <div id="weather-icon"></div>
+                    <p id="temperature"></p>
+                </div>
+                <p id="description"></p>
+                <div id="additional-info">
+                    <div class="info-item">
+                        <span class="info-label">Humidity</span>
+                        <p id="humidity"></p>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Wind Speed</span>
+                        <p id="wind-speed"></p>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Feels Like</span>
+                        <p id="feels-like"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast-section glass-panel">
+                <h3>5-Day Forecast</h3>
+                <div id="forecast-container"></div>
+            </div>
+        </div>
+
+        <div class="map-section glass-panel">
+            <h3>Weather Map</h3>
+            <div id="weather-map"></div>
+        </div>
+    </div>
+
+    <!-- Add Leaflet JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Add this just before the closing body tag -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>WeatherNow</h3>
+                <p class="footer-description">
+                    Your trusted source for accurate weather forecasts,
+                    real-time updates, and detailed meteorological data.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="forecast.html">Forecast</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h4>Weather Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Daily Forecast</a></li>
+                    <li><a href="#">Weather Maps</a></li>
+                    <li><a href="#">Weather Alerts</a></li>
+                    <li><a href="#">Weather API</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-envelope"></i> info@weathernow.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Weather Street, City, Country</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 WeatherNow. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
